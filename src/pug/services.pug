@@ -1,0 +1,212 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - Каталог
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li.active
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+				.breadcrumb
+					.inline
+						a(href='index.html')
+							span Главная
+					span.delimiter -
+					.inline
+						span Экскаваторы ЭКГ
+				h1.block-title
+					| Экскаваторы ЭКГ
+				a.top-block-btn.btn.btn-2.fancy(href='#parts-form') Заказать запчасти
+		.section-menu
+			.container
+				ul.nav.production-nav
+					li
+						a(href='catalog.html') Экскаваторы ЭКГ
+					li
+						a(href='catalog-parts.html') Запчасти ЭКГ
+					li.active
+						a(href='services.html') Ремонт и обслуживание
+		// main
+		.main
+			.page-section.services
+				.container
+					.text
+						p
+							b ЗАО «ЭКГ СЕРВИС ХОЛДИНГ»
+							|  готово осуществлять техническое обслуживание парка Ваших экскаваторов ЭКГ 5А, ЭКГ 8И и других модификаций . Мы проводим текущие и капитальные ремонты , с малоудалёнными предприятиями заключаем договоры на сервисное обслуживание техники.
+						p
+							| Обслуживание техники производится в 
+							b 3 этапа
+							| :
+						p
+							b 1 этап:
+							br
+							|  Для проведения ремонтов и принятия машин на сервисное обслуживание, проводится обследование технического состояния экскаватора с составлением дефектной ведомости и выдачей рекомендаций по ремонту, наладке и замене оборудования. В перечень выполняемых работ по обследованию технического состояния экскаваторов входит:
+						ul.style-ul
+							li
+								| проведение осмотра механической и электрической части, выявление дефектов, замеры эксплуатационных характеристик;
+							li
+								| описание технического состояния экскаватора, составление дефектной ведомости и перечня комплектующих для ремонта;
+							li рекомендации и заключение.
+						p
+							b 2 этап:
+							br
+							| В соответствии с дефектной ведомостью и рекомендациями проводится ремонт экскаваторов ЭКГ необходимого уровня и пуско-наладочные работы. Ремонты производятся силами ЗАО «ЭКГСервисХолдинг» по отдельной ведомости с согласованными ценами на ремонт, либо силами заказчика под руководством специалистов ЗАО «ЭКГСервисХолдинг» с проведением ими пуско-наладочных работ.
+						p
+							b 3 этап:
+							br
+							|  Подписание акта выполненных работ, акта ввода в эксплуатацию и договоров на гарантийное и сервисное обслуживание. Готовы по Вашему запросу произвести в отдельности любую из вышеуказанных работ по согласованной стоимости.
+						p
+							b Предоставляется гарантия на выполненные работы.
+		// footer-form
+		.page-section.footer-form
+			#services-form
+				.form-wrap
+					form.services-form.form.container
+						.block-title Заявка ремонт и обслуживание
+						.row
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+						.row
+							.col.col-6
+								.form-item
+									textarea.form-control(placeholder='Интересующая продукция')
+							.col.col-6
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree-1(type='checkbox')
+								label.control-label(for='agree-1')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+		// region-hidden
+		.region-hidden
+			#parts-form.form-popup
+				.form-wrap
+					form.parts-form.form.container
+						.block-title Заказать запчасти
+						.row
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+							.col.col-3
+								.form-item.error
+									.error-label обязательное поле
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+						.row
+							.col.col-6
+								.form-item
+									textarea.form-control(placeholder='Интересующая продукция')
+							.col.col-6
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree(type='checkbox')
+								label.control-label(for='agree')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|         «ЭКГСервисХолдинг»
+					br
+					|         Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|          ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug

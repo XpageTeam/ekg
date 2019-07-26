@@ -1,0 +1,274 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - Контакты
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li.active
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+				.breadcrumb
+					.inline
+						a(href='index.html')
+							span Главная
+					span.delimiter -
+					.inline
+						span Контакты
+				h1.block-title
+					| Контакты
+		// main
+		.main.contacts-page
+			.page-section.contacts-section.light
+				.container
+					h3.section-title Адреса:
+					.row
+						.col.col-6
+							.contacts-item.address
+								.title Адрес офиса:
+								p
+									| 454080, г. Челябинск, ул. Карла Маркса, 131, этаж 4,
+									br
+									|               АО «ЭКГСервисХолдинг»
+									br
+									a(href='#') Показать на карте
+						.col.col-6
+							.contacts-item.address
+								.title Адрес склада:
+								p
+									| 454080, г. Челябинск, ул. Енисейская, 8 
+									br
+									a(href='#') Показать на карте
+						.col.col-6
+							.contacts-item.address
+								.title Юридический адрес:
+								p
+									| 454091, г. Челябинск, ул. Карла Маркса 131-414,
+									br
+									|  АО «ЭКГСервисХолдинг»
+						.col.col-6
+							.contacts-item.address
+								.title Почтовый адрес:
+								p 454000, г. Челябинск, а/я 30
+			.page-section.contacts-section.light
+				.container
+					h3.section-title Контактные данные:
+					.row
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+73512466060') +7 (351) 246-60-60
+								br
+								span Челябинск
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+73432372466') +7 (343) 237-24-66
+								br
+								span Екатеринбург
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+73912150424') +7 (391) 215-04-24
+								br
+								span Красноярск
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+77172727410') +7 (7172) 72-74-10
+								br
+								span Астана
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+74956461592') +7 (495) 646-15-92
+								br
+								span Москва
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+73842670669') +7 (3842) 670-669
+								br
+								span Кемерово
+						.col.col-3
+							.contacts-item.phone
+								a(href='tel:+78612920155') +7 (861) 292-01-55
+								br
+								span Краснодар
+						.col.col-3
+							.contacts-item.mail
+								a(href='mailto:info@ekg-servis.ru') info@ekg-servis.ru
+								br
+								span Написать письмо
+			.page-section.contacts-section.dark
+				.container
+					h3.section-title Отдел продаж:
+					.row
+						.col.col-4
+							.contacts-item.user
+								.title Начальник отдела продаж
+								|               Васильева Олеся
+								br
+								| +7 (351) 246-60-60 (доб. 233)
+								br
+								a(href='mailto:olesya@ekg-servis.ru') olesya@ekg-servis.ru
+						.col.col-4
+							.contacts-item.user
+								.title Менеджер
+								|               Нечеухин Евгений
+								br
+								|  +7 (351) 246-60-60 (доб. 215)
+								br
+								a(href='mailto:necheukhin@ekg-servis.ru') necheukhin@ekg-servis.ru
+						.col.col-4
+							.contacts-item.user
+								.title Менеджер
+								|               Холод Станислав
+								br
+								|  +7 (351) 246-60-60 (доб. 224)
+								br
+								a(href='mailto:holod@ekg-servis.ru') holod@ekg-servis.ru
+						.col.col-4
+							.contacts-item.user
+								.title
+									| Менеджер отдела бурового
+									br
+									|  оборудования
+								|               Щербинин Валерий
+								br
+								|  +7 (351) 246-60-60 (доб. 223)
+								br
+								a(href='mailto:sherbinin@ekg-servis.ru') sherbinin@ekg-servis.ru
+						.col.col-4
+							.contacts-item
+								.title Бухгалтерия
+								|               +7 (351) 246-60-60 (доб.3333)
+								br
+								a(href='mailto:natalya@ekg-servis.ru') natalya@ekg-servis.ru
+			.page-section.contacts-section.light
+				.container
+					h3.section-title Реквизиты:
+					.row
+						.col.col-6
+							.title Единоличный исполнительный орган
+							p
+								| ООО УК «БЕТА» в лице директора Кузнецова Сергея Владимировича, действующего на основании договора управления №1 от 01.03.2015г.
+							.title Коммерческий директор
+							p Лапин Виктор Олегович
+							.title Реквизиты
+							p
+								| ИНН: 7448067392,
+								br
+								|               КПП: 745301001
+								br
+								|               ОГРН: 1057422010623
+								br
+								|               ОКПО: 75425964, ОКАТО: 75401366000
+								br
+								|               ОКВЭД: 51.70
+							.title Для расчетов в валюте:
+							p
+								| 40702840100160001963: доллары США;
+								br
+								|               40702978700160001963: ЕВРО.
+						.col.col-6
+							.title Расчетный счет №1
+							p
+								| 40702810200230760597
+								br
+								|               Филиал «Корпоративный» ПАО «Совкомбанк»
+								br
+								|               Корреспондентский счет: 30101810445250000360
+								br
+								|               БИК: 044525360
+							.title Расчетный счет №2
+							p
+								| 40702810800160001963
+								br
+								|               Операционный офис «Челябинский» ф-ла
+								br
+								|               Банковский центр УРАЛ ПАО Банк ЗЕНИТ
+								br
+								|               Корреспондентский счет: 30101810765770000419
+								br
+								|               в Уральском ГУ Банка России
+								br
+								|               БИК: 046577419
+			.section-map
+				script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A70b606bb4b98fe57b2b083453e7a27de1facbad9e56b9f0071140542baf06320&width=100%25&height=500&lang=ru_RU&scroll=false')
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|         «ЭКГСервисХолдинг»
+					br
+					|         Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|          ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug

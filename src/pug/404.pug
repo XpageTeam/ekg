@@ -1,0 +1,104 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - 404
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li.active
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+		// main
+		.main
+			.page-section.page-404
+				.container
+					img(src='img/404.png', alt='')
+					.text
+						p
+							| Что-то пошло не так, страница больше не существует.
+							br
+							| Пожалуйста, перейдите на 
+							a(href='#') главную страницу
+							|  сайта.
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|         «ЭКГСервисХолдинг»
+					br
+					|         Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|          ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug

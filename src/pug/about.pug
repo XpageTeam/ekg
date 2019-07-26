@@ -1,0 +1,169 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - О компании
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li.active
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+				.breadcrumb
+					.inline
+						a(href='index.html')
+							span Главная
+					span.delimiter -
+					.inline
+						span О компании
+				h1.block-title О компании
+				.text
+					p
+						| АО «ЭКГСервисХолдинг» за 15 лет успешной работы зарекомендовало себя в роли надёжного и проверенного производителя запасных частей к карьерным экскаваторам различных модификаций, буровым станкам, тракторной и бульдозерной технике. Силами сервисной бригады компании было выполнено значительное количество капитальных ремонтов и осуществлены наладки горнодобывающего оборудования как в России так и за ее пределами.
+		// main
+		.main.dark
+			.page-section.abot-company
+				.container
+					.about-company-item
+						.icon
+							img(src='img/icon1.png', alt='')
+						.text
+							.title Производственная база
+							p
+								| Основной производственной базой компании являются мощности Завода Гордеталь, который за 12 лет прошел путь от небольшого ремонтно-механического цеха до производственного подразделения АО ЭКГСервисХолдинг. На предприятии широкий станочный парк - механосборочный цех , цех металлоконструкций , цех ремонта горного оборудования.
+							p
+								| Такие производственные мощности позволяют ежемесячно отгружать более 300 тонн готовой продукции. И эти объемы производства далеко не предел.
+			.page-section.abot-company
+				.container
+					.about-company-item
+						.icon
+							img(src='img/icon1.png', alt='')
+						.text
+							.title Качество
+							p
+								| Основополагающими принципами работы АО ЭКГСервисХолдинг являются три критерия: качество, цена продукции и сроки поставки. Строгий контроль и совершенствование этих трех составляющих позволяют компании поставлять запчасти и услуги флагманам горнодобывающей промышленности России, ближнего и дальнего зарубежья.
+							p
+								| Продукция компании изготавливается в полном соответствии с техническими условиями и конструкторской документацией разработчиков. Изделия проходят двойную проверку отдела технического контроля на стадии поставки сырья и при выпуске продукции. Все изделия промаркированы фирменным клеймом АО ЭКГСервисХолдинг. Это гарантия качества и защита от подделки , вся продукция сопровождается сертификатом качества и предусматривает гарантию до 24 месяцев.
+							.marker
+								| Система менеджмента качества соответствует требованиям ISO 9001:2000,что подтверждается соответствующим сертификатом.
+			.page-section.abot-company
+				.container
+					.about-company-item
+						.icon
+							img(src='img/icon1.png', alt='')
+						.text
+							.title Сроки и ассортимент
+							p
+								| Постоянное наличие более тысячи наименований готовых запасных частей на складе в Челябинске позволяет производить оперативную доставку продукции покупателям где бы они ни находились. Собственный автопарк и прямое сотрудничество с ОАО РЖД позволяют выстраивать удобные для клиента логистические схемы. А многолетний опыт внешнеэкономической деятельности обеспечивает значительное сокращение сроков прохождения таможенного оформления.
+							div
+							p
+								| Стараясь удовлетворить потребность клиентов в широком ассортименте качественной продукции, за прошедшие несколько лет освоено производство ковшей к гидравлическим экскаваторам Komatsu, Caterpillar , Hyundai, Volvo, Doosan и другим. Освоено производство рукоятей для карьерных гусеничных экскаваторов с применением современных материалов и технологий.
+							.partners.row
+								.col
+									img(src='img/partner1.png', alt='')
+								.col
+									img(src='img/partner2.png', alt='')
+								.col
+									img(src='img/partner3.png', alt='')
+							p Благодаря этому АО ЭКГСервисХолдинг с уверенностью строит планы на будущее.
+			.page-section.abot-company
+				.container
+					.about-company-slider.slider-wrap
+						.controls
+						.slider-items
+							.slider-item.page-slider-item
+								img(data-lazy='img/slide.jpg', alt='')
+							.slider-item.page-slider-item
+								img(data-lazy='img/slide.jpg', alt='')
+							.slider-item.page-slider-item
+								img(data-lazy='img/slide.jpg', alt='')
+							.slider-item.page-slider-item
+								img(data-lazy='img/slide.jpg', alt='')
+							.slider-item.page-slider-item
+								img(data-lazy='img/slide.jpg', alt='')
+						.progress-wrap
+							.slide-number
+							.slider-progress
+								span.progress-inner
+							.slide-quantity
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|  «ЭКГСервисХолдинг»
+					br
+					|  Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|  ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug

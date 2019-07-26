@@ -1,0 +1,344 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - Карточка товара
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li.active
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+				.breadcrumb
+					.inline
+						a(href='index.html')
+							span Главная
+					span.delimiter -
+					.inline
+						a(href='catalog.html')
+							span Экскаваторы ЭКГ
+					span.delimiter -
+					.inline
+						span Экскаватор ЭКГ 5А
+				h1.block-title
+					| Экскаватор ЭКГ 5А
+				a.top-block-btn.btn.btn-2.fancy(href='#parts-form') Заказать запчасти
+		.section-menu
+			.container
+				ul.nav.production-nav
+					li.active
+						a(href='catalog.html') Экскаваторы ЭКГ
+					li
+						a(href='catalog-parts.html') Запчасти ЭКГ
+					li
+						a(href='services.html') Ремонт и обслуживание
+		// main
+		.main
+			.page-section.product-slider.light
+				.section-text-before Экскаватор ЭКГ 5А
+				.slider-wrap
+					.controls
+					.slider-items.container
+						.slider-item.product-slider-item
+							.container
+								.img
+									img(data-lazy='img/img2.jpg', alt='')
+								.desc
+									.block-title Экскаватор ЭКГ 5А
+									p
+										| Экскаватор ЭКГ-5 карьерный гусеничный с ковшом вместимостью 5 м3 — электрическая карьерная полноповоротная лопата на гусеничном ходу, предназначенная для выемки и погрузки в транспортные средства полезных ископаемых и вскрышных пород, в том числе тяжелых скальных, предварительно разрыхленных взрывом, в угольной промышленности, в промышленности строительных материалов, а также для выполнения больших объемов земляных работ в промышленном строительстве. Экскаваторы ЭКГ просты в управлении и обслуживании.
+						.slider-item.product-slider-item
+							.container
+								.img
+									img(data-lazy='img/prod3.jpg', alt='')
+								.desc
+									.block-title Экскаватор ЭКГ 5А
+									p
+										| Экскаватор ЭКГ-5 карьерный гусеничный с ковшом вместимостью 5 м3 — электрическая карьерная полноповоротная лопата на гусеничном ходу, предназначенная для выемки и погрузки в транспортные средства полезных ископаемых и вскрышных пород.
+						.slider-item.product-slider-item
+							.container
+								.img
+									img(data-lazy='img/prod2.jpg', alt='')
+								.desc
+									.block-title Экскаватор ЭКГ 5А
+									p
+										| Экскаватор ЭКГ-5 карьерный гусеничный с ковшом вместимостью 5 м3 — электрическая карьерная полноповоротная лопата на гусеничном ходу, предназначенная для выполнения больших объемов земляных работ в промышленном строительстве. Экскаваторы ЭКГ просты в управлении и обслуживании.
+				.section-text-after Экскаватор ЭКГ 5А
+			.page-section.parts.product-parts
+				.container
+					.parts-top
+						.block-title Запчасти
+						.catalog-search
+							form.search
+								.form-group
+									input.form-control(type='text', placeholder='Поиск по названию или № детали')
+									button.search-btn(type='submit')
+				.parts-table
+					.table-header
+						.table-row
+							.container
+								.table-col.col-2.code
+									span Обозначение
+								.table-col.name.col-5
+									span Наименование
+								.table-col.scheme.col-05
+									span Чертеж
+								.table-col.photo.col-05
+									span Фото
+								.table-col.quantity.col-1
+									span Количество
+								.table-col.order.col-05
+									span Заказать
+					.table-body
+						.table-row
+							.container
+								.table-col.code.col-2
+									span 03820.00-01сб
+								.table-col.name.col-5 Распределитель РЭП-1-1-20
+								.table-col.scheme.col-05
+									a.scheme-link.fancy(href='img/prod1.jpg')
+								.table-col.photo.col-05
+									a.photo-link.fancy(href='img/prod2.jpg')
+								.table-col.quantity.col-1
+									.quantity-wrap
+										span.quantity-link.minus -
+										input.quan.form-control(type='text', value='1')
+										span.quantity-link.plus +
+								.table-col.order.col-05
+									a.order-link.fancy(href='#parts-form') +
+						.table-row
+							.container
+								.table-col.code.col-2
+									span 03820.00-01сб
+								.table-col.name.col-5 Распределитель РЭП-1-1-20
+								.table-col.scheme.col-05
+									a.scheme-link.fancy(href='img/prod3.jpg')
+								.table-col.photo.col-05
+									a.photo-link.fancy(href='img/prod4.png')
+								.table-col.quantity.col-1
+									.quantity-wrap
+										span.quantity-link.minus -
+										input.quan.form-control(type='text', value='1')
+										span.quantity-link.plus +
+								.table-col.order.col-05
+									a.order-link.fancy(href='#parts-form') +
+						.table-row
+							.container
+								.table-col.code.col-2
+									span 03820.00-01сб
+								.table-col.name.col-5 Распределитель РЭП-1-1-20
+								.table-col.scheme.col-05
+									a.scheme-link.fancy(href='img/prod3.jpg')
+								.table-col.photo.col-05
+								.table-col.quantity.col-1
+									.quantity-wrap
+										span.quantity-link.minus -
+										input.quan.form-control(type='text', value='1')
+										span.quantity-link.plus +
+								.table-col.order.col-05
+									a.order-link.fancy(href='#parts-form') +
+						.table-row
+							.container
+								.table-col.code.col-2
+									span 03820.00-01сб
+								.table-col.name.col-5 Распределитель РЭП-1-1-20
+								.table-col.scheme.col-05
+								.table-col.photo.col-05
+									a.photo-link.fancy(href='img/prod4.png')
+								.table-col.quantity.col-1
+									.quantity-wrap
+										span.quantity-link.minus -
+										input.quan.form-control(type='text', value='1')
+										span.quantity-link.plus +
+								.table-col.order.col-05
+									a.order-link.fancy(href='#parts-form') +
+				.all-parts-link.container
+					a.doc(href='#') Полный каталог запчастей
+			.page-section.product-desc.light
+				.container
+					.block-title
+						| Экскаватор ЭКГ 5А
+					.product-tabs
+						ul.production-menu
+							li.active
+								a(href='#') Описание
+							li
+								a(href='#') Общее устройство
+							li
+								a(href='#') Технические характеристики
+							li
+								a(href='#') Модификации
+							li
+								a(href='#') Конструктивные особенности
+							li
+								a(href='#') Электрооборудование
+							li
+								a(href='#') Транспортировка
+						.product-tabs-content
+							.tabs-title Технические характеристики ЭКГ 5А
+							.text
+								p
+									| Технические характеристики представленные в таблице для карьерных экскаваторов модификации 5А.
+							.table-wrap
+								table
+									thead
+										tr
+											td Параметры
+											td ЭКГ-5А
+											td ЭКГ-5В
+											td ЭКГ-5В
+											td ЭКГ-5Д
+											td ЭКГ-5А-УС
+									tbody
+										tr
+											td Вместимость ковша, м2 
+											td 5,2
+											td 5,2
+											td 5,2
+											td 5,2
+											td 5,2
+										tr
+											td Радиус черпания наибольший, м 
+											td 14.5
+											td 14.5
+											td 14.5
+											td 14.5
+											td 14.5
+										tr
+											td Среднее удельное давление на грунт при передвижении, кПа 
+											td 2,1/1,72/1,3
+											td 2,1/1,72/1,3
+											td 2,1/1,72/1,3
+											td 2,1/1,72/1,3
+											td 2,1/1,72/1,3
+										tr
+											td Высота черпания наибольшая, м
+											td 205/162/127
+											td 205/162/127
+											td 205/162/127
+											td 205/162/127
+											td 205/162/127
+							.text
+								p
+									| Экскаватор ЭКГ-5 карьерный гусеничный с ковшом вместимостью 5 м3 — электрическая карьерная полноповоротная лопата на гусеничном ходу, предназначенная для выемки и погрузки в транспортные средства полезных ископаемых и вскрышных пород, в том числе тяжелых скальных, предварительно разрыхленных взрывом, в угольной промышленности, в промышленности строительных материалов, а также для выполнения больших объемов земляных работ в промышленном строительстве. Экскаваторы ЭКГ просты в управлении и обслуживании.
+								p
+									| Аббревиатура экскаватора ЭКГ расшифровывается следующим образом: Э - экскаватор, К – карьерный, Г – гусеничный. Следующая цифра (например, ЭКГ 5) обозначает вместимость ковша в кубических метрах. Следующий за цифрой буквенный индекс показывает вариант модернизации (например, У - экскаватор с удлиненным рабочим оборудованием для верхней погрузки), а также, может обозначать код производителя.
+								p
+									| Данный экскаватор это модификация старых моделей Уралмашзавода: ЭКГ-4,6Б и ЭКГ-4,6, ЭКГ-4,6А.
+								img(src='img/img.jpg', alt='')
+		// region-hidden
+		.region-hidden
+			#parts-form.form-popup
+				.form-wrap
+					form.parts-form.form.container
+						.block-title Заказать запчасти
+						.row
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+							.col.col-3
+								.form-item.error
+									.error-label обязательное поле
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+						.row
+							.col.col-6
+								.form-item
+									textarea.form-control(placeholder='Интересующая продукция')
+							.col.col-6
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree(type='checkbox')
+								label.control-label(for='agree')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|         «ЭКГСервисХолдинг»
+					br
+					|         Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|          ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug

@@ -1,0 +1,235 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(http-equiv='X-UA-Compatible', content='ie=edge')
+		title ЭКГ Сервис - Формы
+		include inc/head.pug
+		include inc/css.pug
+		// favicon
+		link(rel='apple-touch-icon', sizes='180x180', href='apple-touch-icon.png')
+		link(rel='icon', type='image/png', sizes='32x32', href='favicon-32x32.png')
+		link(rel='icon', type='image/png', sizes='16x16', href='favicon-16x16.png')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel='mask-icon', href='safari-pinned-tab.svg', color='#25272b')
+		meta(name='msapplication-TileColor', content='#25272b')
+		meta(name='theme-color', content='#25272b')
+		//- // styles
+		//- link(rel='stylesheet', href='css/slick.css')
+		//- link(rel='stylesheet', href='css/slinky.min.css')
+		//- link(rel='stylesheet', href='css/jquery.fancybox.min.css')
+		//- link(rel='stylesheet', href='css/style.css')
+		//- // scripts
+		//- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		//- script(src='js/slick.min.js')
+		//- script(src='js/slinky.min.js')
+		//- script(src='js/jquery.fancybox.min.js')
+		//- script(src='js/main.js')
+	body.inner
+		// header
+		header
+			.container
+				.col-left
+					.logo
+						a(href='index.html')
+							img(src='img/logo.svg', alt='ЭКГ Сервис')
+				.col-right
+					.header-toggle
+						nav
+							ul.main-menu.nav
+								li.active
+									a(href='catalog.html') Каталог
+								li
+									a(href='special-offers.html') Спецпредложения
+								li.submenu-toggle
+									a(href='about.html') О компании
+									.page-section.submenu-wrap
+										.container
+											ul.submenu.nav
+												li.active
+													a(href='about.html') О компании
+												li
+													a(href='#') Нас рекомендуют
+												li
+													a(href='#') Сертификаты и дипломы
+												li
+													a(href='geography.html') География поставок
+												li
+													a(href='#') Судебная практика
+												li
+													a(href='#') Обработка персональных данных
+								li
+									a(href='contacts.html') Контакты
+						.header-contacts
+							a.phone(href='tel:+73512466060') +7 (351) 246-60-60
+					.header-btn
+						.search-btn
+						.lang-toggle
+							a.dropdown-toggle(href='#') ru
+							ul.dropdown-menu
+								li
+									a(href='#') en
+								li
+									a(href='#') es
+		// top-block
+		.page-section.top-block
+			.container
+				h1.block-title
+					| Формы
+		// main
+		.main
+			.page-section
+				.container
+					p
+						a.btn.btn-2.fancy(href='#parts-form') Заказать запчасти
+					p
+						a.btn.btn-2.fancy(href='#pryas-form') Заказать прайс
+					p
+						a.btn.btn-2.fancy(href='#order-call-form') Обратный звонок
+		// footer-form
+		.page-section.footer-form
+			#services-form
+				.form-wrap
+					form.services-form.form.container
+						.block-title Заявка ремонт и обслуживание
+						.row
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+							.col.col-3
+								.form-item.error
+									.error-label обязательное поле
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+						.row
+							.col.col-6
+								.form-item
+									textarea.form-control(placeholder='Интересующая продукция')
+							.col.col-6
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree-1(type='checkbox', checked='')
+								label.control-label(for='agree-1')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+		// region-hidden
+		.region-hidden
+			#parts-form.form-popup
+				.form-wrap
+					form.parts-form.form.container
+						.block-title Заказать запчасти
+						.row
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+							.col.col-3
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+						.row
+							.col.col-6
+								.form-item
+									textarea.form-control(placeholder='Интересующая продукция')
+							.col.col-6
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree(type='checkbox', checked='')
+								label.control-label(for='agree')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+			#pryas-form.form-popup
+				.form-wrap
+					form.pryas-form.form.container
+						.block-title Заказать прайс
+						.row
+							.col.col-left
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+								.form-item
+									input.form-control(type='text', placeholder='Организация')
+								.form-item
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+								.form-item
+									input.form-control(type='text', placeholder='E-mail')
+							.col.col-right
+								.form-group.products-form
+									label.form-label Интересующая продукция:
+									.row
+										.form-item.form-checkbox.col.col-4
+											input#check-1(type='checkbox')
+											label.control-label(for='check-1') запчасти ЭКГ-5А
+										.form-item.form-checkbox.col.col-4
+											input#check-2(type='checkbox')
+											label.control-label(for='check-2') запчасти ЭКГ-8И
+										.form-item.form-checkbox.col.col-4
+											input#check-3(type='checkbox')
+											label.control-label(for='check-3') запчасти СБШ-250
+										.form-item.form-checkbox.col.col-4
+											input#check-5(type='checkbox')
+											label.control-label(for='check-5') трехшарошечное долото
+										.form-item.form-checkbox.col.col-6
+											input#check-4(type='checkbox')
+											label.control-label(for='check-4') запчасти к тракторам и бульдозерам
+								.form-item.add-info
+									textarea.form-control(placeholder='Прочая информация')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree-2(type='checkbox', checked='')
+								label.control-label(for='agree-2')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+			#order-call-form.form-popup
+				.form-wrap
+					form.order-call-form.form.container
+						.block-title Обратный звонок
+						.row
+							.col.col-6
+								.form-item
+									input.form-control(type='text', placeholder='ФИО')
+							.col.col-6
+								.form-item
+									input.form-control(type='text', placeholder='+7 (900) 000-00-00')
+						.form-bottom
+							.form-item.form-checkbox.agree
+								input#agree-3(type='checkbox', checked='')
+								label.control-label(for='agree-3')
+									| Я согласен на 
+									a(href='#') обработку персональных данных
+							.form-item.submit
+								button.btn.btn-2(type='submit') Отправить
+		// footer
+		footer.page-section.footer
+			.container
+				.col-left
+					span.copyright
+						| © 2003 - 2019 АО
+						br
+						|         «ЭКГСервисХолдинг»
+					br
+					|         Все права защищены.
+				.col-right
+					span.iso ISO 9001:2000
+					br
+					|          ЭКГ Сервис владеет европейским сертификатом соответствия
+	include inc/scripts.pug
