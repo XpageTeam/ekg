@@ -1,0 +1,62 @@
+.paginator
+	display: flex
+	justify-content: center
+	margin-top: 90px
+	align-items: center
+	max-width: 100% !important
+
+	li
+		list-style: none
+		padding: 0 !important
+
+		a
+			line-height: 1
+			width: 30px
+			text-align: center
+			display: block
+			color: #fff
+			text-decoration: none
+
+			&.active
+				color: #dd7b51
+
+			&:hover
+				color: #dd7b51
+
+		&:before
+			display: none !important
+
+	.paginator__arrow
+		position: relative
+
+		a
+			size: 40px
+			border-radius: 50%
+			background-color: var(--background-color)
+			display: block
+
+			&:after
+				content: ''
+				position: absolute
+				top: calc(50% - 3px)
+				left: calc(50% - 3px)
+				display: block
+				size: 6px
+				border-top: 1px solid #fff 
+				border-right: 1px solid #fff
+				transform: rotate(45deg) 
+				
+	.paginator__arrow:first-child
+		margin-right: 30px
+		transform: rotate(180deg)
+
+
+	.paginator__arrow:last-child
+		margin-left: 30px !important
+
+
+
+@media screen and (max-width: 1000px)
+	
+	.paginator
+		margin-top: 40px
