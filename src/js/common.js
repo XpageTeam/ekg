@@ -12,6 +12,7 @@ require("./slinky.min.js");
 require("./jquery.fancybox.js");
 require("../css/jquery.fancybox.css");
 
+
 ;(function() {
 
   // проверяем поддержку
@@ -48,8 +49,24 @@ require("../css/jquery.fancybox.css");
 
 document.addEventListener("DOMContentLoaded", e => {
 
-	
+	$('.search-btn').click(function(){
+    $('body').toggleClass('js__search-opened');
+  })
 
-
+  $('.top-search__close').click(function(){
+     $('body').removeClass('js__search-opened');
+  })
 
 });
+
+
+$(window).on("load resize", e => {
+
+  var headerHeight = $('header').innerHeight();
+  $('.top-search__cont').css({
+    top: headerHeight,
+  })
+
+  
+});
+
