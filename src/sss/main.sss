@@ -1442,13 +1442,17 @@ svg.map-points
 .offers-card 
 	padding: 20px 40px 40px 40px
 
+	.col-left
+		display: flex
+		flex-direction: column
+
+		.price
+			margin-top: auto
+
 
 .product-card,
 .offers-card 
-	display: -webkit-box
-	display: -ms-flexbox
 	display: flex
-	-ms-flex-wrap: wrap
 	flex-wrap: wrap
 
 
@@ -2100,8 +2104,6 @@ a.doc:focus
 
 .partners 
 	margin-bottom: -20px
-	-webkit-box-align: center
-	-ms-flex-align: center
 	align-items: center
 
 
@@ -2109,33 +2111,37 @@ a.doc:focus
 	border-bottom: 1px solid #34363A
 
 
-.about-company-item .text 
-	padding-left: 80px
+.about-company-item 
+	.text 
+		padding-left: 80px
 
 
-.about-company-slider .slick-list 
-	padding: 5vw 0 !important
+.about-company-slider 
+	.slick-list 
+		padding: 5vw 0 !important
 
 
-.about-company-slider .slider-item 
-	position: relative
-	opacity: 0.7
-	-webkit-filter: blur(5px) brightness(60%)
-	filter: blur(5px) brightness(60%)
-	transition: opacity 0.6s linear, -webkit-transform 0.6s linear
-	-webkit-transition: opacity 0.6s linear, -webkit-transform 0.6s linear
-	transition: transform 0.6s linear, opacity 0.6s linear
-	transition: transform 0.6s linear, opacity 0.6s linear, -webkit-transform 0.6s linear
-	z-index: 0
+	.slick-slide
+		position: relative
+		opacity: 0.7
+		filter: blur(5px) brightness(60%)
+		transition: opacity 0.6s linear
+		transition: transform 0.6s linear, opacity 0.6s linear
+		z-index: 0
+
+	.slick-center.slick-current 
+		opacity: 1
+		filter: blur(0) brightness(100%)
+		transform: scale(1.5)
+		z-index: 9999
+		position: relative
+
+		.slider-item
+			opacity: 1
+			filter: blur(0) brightness(100%)
 
 
-.about-company-slider .slider-item.slick-center.slick-current 
-	opacity: 1
-	-webkit-filter: blur(0) brightness(100%)
-	filter: blur(0) brightness(100%)
-	-webkit-transform: scale(1.5)
-	transform: scale(1.5)
-	z-index: 1
+
 
 
 .about-company-slider.slider-wrap .controls 
@@ -2279,11 +2285,12 @@ a.doc:focus
 
 .page-404 
 	text-align: center
-	margin-top: -7vw
+	// margin-top: -7vw
 
 
-.page-404 img 
-	margin-bottom: 50px
+	img 
+		margin-bottom: 50px
+
 
 
 .page-404 .text 
@@ -2303,30 +2310,49 @@ a.doc:focus
 	pointer-events: none
 	background: url("../img/404-bg.png") no-repeat center
 
+.pages-404 
+	.main
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
 
-.partners__list .slick-dots 
-	margin-top: 25px
+.partners__list 
+	.slick
+		&-dots 
+			margin-top: 25px
 
+		&-list 
+			margin: 0 -17px
 
-.partners__list .slick-list 
-	margin: 0 -7px
+		&-track 
+			display: flex !important
 
+		&-slide
+			display: flex !important
+			margin: 0 17px
+			height: auto !important
+			background: #2c2e32
+			border-radius: 7px
 
-.partners__list .slick-track 
-	display: flex
+			> 
+				div
+					display: flex
+					flex-direction: column
+					flex: 1 1 auto
+					justify-content: center
+					align-items: center
+
 
 
 .partners__item 
 	display: flex !important
 	justify-content: center
-	-ms-align-items: center
 	align-items: center
 	background: #2C2E32
-	border-radius: 7px
 	border: 1px solid #2C2E32
 	opacity: .5
 	padding: 20px 45px
-	margin: 0 17px
 	flex: 1 1 auto
 	height: auto !important
 
@@ -2334,6 +2360,9 @@ a.doc:focus
 @media screen and (max-width: 1440px) 
 	.container 
 		max-width: 95%
+
+	header ul.main-menu>li>a
+		padding: 30px 5px 45px
 	
 
 	.submenu-wrap .container 
@@ -2859,7 +2888,17 @@ a.doc:focus
 	
 
 
-@media screen and (max-width: 960px) 
+@media screen and (max-width: 1000px)
+	.production-menu
+		margin-left: 0
+		margin-right: 0
+
+@media screen and (max-width: 960px)
+	
+	.submenu
+		background: #202125
+		z-index: 10
+
 	.geography-list 
 		position: relative
 		margin-top: -20vw
@@ -3232,6 +3271,19 @@ a.doc:focus
 		width: 25px
 		height: 25px
 		top: 6px
+
+	.product-tabs
+
+		.nav-tabs
+			overflow-x: auto
+			scroll-snap-type: x mandatory
+			-webkit-overflow-scrolling: touch
+			margin: 0
+			justify-content: flex-start
+
+			li
+				scroll-snap-align: start
+				flex: none
 	
 
 
@@ -3245,20 +3297,15 @@ a.doc:focus
 @media screen and (max-width: 660px)
 
 	.production-menu
-		margin: 0 
+		margin: 0
+
+	.about-company-item
+		flex-direction: column
+
+		.text
+			padding: 20px 0 0 0
 	
-	.product-tabs
 
-		.nav-tabs
-			overflow-x: auto
-			scroll-snap-type: x mandatory
-			-webkit-overflow-scrolling: touch
-			margin: 0
-			justify-content: flex-start
-
-			li
-				scroll-snap-align: start
-				flex: none
 
 	.catalog-search 
 		width: 100%
@@ -3324,7 +3371,7 @@ a.doc:focus
 	
 
 	.form-checkbox label 
-		padding-left: 40px
+		padding-left: 30px
 	
 
 	.form-checkbox label::before 
@@ -3545,8 +3592,6 @@ a.doc:focus
 		line-height: 40px
 	
 
-	.about-company-item .text 
-		padding-left: 20px
 	
 
 	.footer .col-right 

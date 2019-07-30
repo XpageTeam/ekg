@@ -224,6 +224,59 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("load resize", function
     top: headerHeight
   });
 });
+document.addEventListener("DOMContentLoaded", function (e) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width() < 1000) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".tab-content table").wrap('<div class="table-wrap"><div class="table-wrap__track"></div></div>');
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".table-wrap").prepend('<div class="table-wrap__shadow table-wrap__shadow--left"></div>').append('<div class="table-wrap__shadow table-wrap__shadow--right"></div>');
+    var tableWrapTracks = document.querySelectorAll(".table-wrap__track");
+    if (!tableWrapTracks.length) return;
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = tableWrapTracks[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var track = _step.value;
+
+        if (track.scrollWidth > track.clientWidth) {
+          var wrap = track.closest(".table-wrap");
+          var shadows = {
+            right: wrap.querySelector(".table-wrap__shadow--right")
+          };
+          setShadowOpacity(shadows.right, track.scrollWidth - track.clientWidth);
+        }
+
+        track.addEventListener("scroll", function (e) {
+          var wrap = this.closest(".table-wrap");
+          var shadows = {
+            left: wrap.querySelector(".table-wrap__shadow--left"),
+            right: wrap.querySelector(".table-wrap__shadow--right")
+          };
+          setShadowOpacity(shadows.right, this.scrollWidth - this.clientWidth - this.scrollLeft);
+          setShadowOpacity(shadows.left, this.scrollLeft);
+        });
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+          _iterator["return"]();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+  }
+});
+
+var setShadowOpacity = function setShadowOpacity(element, scrollWidth) {
+  var offsetWidth = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 30;
+  element.style.opacity = scrollWidth / offsetWidth <= 1 ? scrollWidth / offsetWidth : 1;
+};
 
 /***/ }),
 
@@ -339,7 +392,7 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     centerMode: true,
     centerPadding: '0',
     appendArrows: $('.about-company-slider .controls')
