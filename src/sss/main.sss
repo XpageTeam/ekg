@@ -85,6 +85,69 @@ b, strong,
 	font-family: 'Futura Demi', sans-serif
 	font-weight: normal
 
+.tab-content
+	ul, ol
+		list-style: none !important
+
+	li
+		position: relative
+
+		&:not(:first-child)
+			margin: 6px 0 0
+
+		&:before
+			display: inline-block
+
+		ul, ol
+			margin-top: 0
+			margin-left: 10px
+
+		ul
+			li
+				&:before
+					content: ''
+
+
+		li
+			padding-left: 10px
+
+			&:before
+				margin-right: 10px !important
+
+			&:not(:first-child)
+				margin-top: 5px
+
+	ul
+
+		li
+			padding-left: 25px
+
+			&:before
+				content: ""
+				position: absolute
+				top: 18px
+				left: 0
+				size: 5px 1px 
+				background: currentColor
+				margin: 0 4px 0 0
+				display: inline-block
+
+			li
+				padding-left: 20px
+
+
+	
+	ol
+		counter-reset: i
+
+		li
+			counter-increment: i
+
+			&:before
+				content: counter(i) "."
+				margin-right: 4px
+
+
 
 .page-header 
 	font-size: 78px
@@ -890,31 +953,30 @@ ul.nav.submenu li.active a
 	justify-content: space-around
 
 
-.production-menu 
+.nav-tabs
 	list-style: none
 	margin-left: -10px
 	margin-right: -10px
 
 
-.production-menu li 
-	display: inline-block
-	padding: 0 10px
-	font-size: 18px
-	margin-bottom: 20px
+	li 
+		display: inline-block
+		padding: 0 10px
+		font-size: 18px
+		margin-bottom: 20px
 
 
-.production-menu li a 
-	display: inline-block
-	min-width: 80px
-	text-align: center
-	padding: 10px 15px 8px
-	color: #fff
-	border-radius: 7px
-	border: 1px solid rgba(255, 255, 255, 0.1)
-	background: transparent
-	text-decoration: none
-	-webkit-transition: background 0.3s linear, border-color 0.3s linear, color 0.3s linear
-	transition: background 0.3s linear, border-color 0.3s linear, color 0.3s linear
+		a 
+			display: inline-block
+			min-width: 80px
+			text-align: center
+			padding: 10px 15px 8px
+			color: #fff
+			border-radius: 7px
+			border: 1px solid rgba(255, 255, 255, 0.1)
+			background: transparent
+			text-decoration: none
+			transition: background 0.3s linear, border-color 0.3s linear, color 0.3s linear
 
 
 .light .production-menu li a 
@@ -998,8 +1060,6 @@ header ul.main-menu > li > a
 
 header ul.nav li a::before 
 	background: rgba(108, 71, 67, 0.65)
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(108, 71, 67, 0.65)), color-stop(50%, #e3824e), color-stop(100%, rgba(104, 79, 78, 0.65)))
-	background: -webkit-gradient(linear, left top, right top, from(rgba(108, 71, 67, 0.65)), color-stop(50%, #e3824e), to(rgba(104, 79, 78, 0.65)))
 	background: linear-gradient(to right, rgba(108, 71, 67, 0.65) 0%, #e3824e 50%, rgba(104, 79, 78, 0.65) 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6c4743', endColorstr='#684f4e', GradientType=1 )
 	top: auto
