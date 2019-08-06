@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.sss"],"names":[],"mappings":"AAAA,WACE,eADO,CAGP,kBACC,WAAW,CACX,iBAAiB,CACjB,wBAAwB,CACxB,QAAQ,CACR,UALI","file":"style.css","sourcesContent":[".city-list\r\n\tmargin-top: 10px\r\n\r\n\tselect\r\n\t\theight: 42px\r\n\t\tpadding: 10px 20px\r\n\t\tbackground-color: #202125\r\n\t\tborder: 0\r\n\t\tcolor: #fff\r\n\r\n"]}

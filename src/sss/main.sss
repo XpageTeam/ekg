@@ -1,5 +1,7 @@
 @import "paginator.sss"
 @import "search-top.sss"
+@import "style.sss"
+
 
 @font-face 
 	font-family: 'Futura Demi'
@@ -147,6 +149,46 @@ b, strong,
 				content: counter(i) "."
 				margin-right: 4px
 
+
+.production-tabs-content .production-menu 
+	margin-bottom: 20px
+
+
+.production-menu 
+	list-style: none
+	margin-left: -10px
+	margin-right: -10px
+
+
+	li 
+		display: inline-block
+		padding: 0 10px
+		font-size: 18px
+		margin-bottom: 20px
+
+		a
+			display: inline-block
+			min-width: 80px
+			text-align: center
+			padding: 10px 15px 8px
+			color: #fff
+			border-radius: 7px
+			border: 1px solid rgba(255,255,255,.1)
+			background: transparent
+			text-decoration: none
+			transition: background 0.3s linear, border-color 0.3s linear, color 0.3s linear
+
+
+.production-menu
+
+	ul.nav
+		justify-content: flex-start
+
+		li a
+			padding: 5px 25px
+
+			&:after
+				display: none
 
 
 .page-header 
@@ -1041,6 +1083,9 @@ header .col-right
 .header-toggle nav 
 	display: inline-block
 
+.header-toggle
+	display: flex
+	align-items: center
 
 .logo 
 	line-height: 1
@@ -1051,7 +1096,7 @@ header ul.nav li a
 
 
 header ul.main-menu > li > a 
-	padding: 30px 20px 45px
+	padding: 30px 15px 45px
 
 
 .header-toggle nav 
@@ -3780,3 +3825,5 @@ a.doc:focus
 	.marker 
 		padding: 15px 20px
 	
+
+
