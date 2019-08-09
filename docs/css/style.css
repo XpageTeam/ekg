@@ -1,2 +1,2 @@
-.city-list{margin-top:10px}.city-list select{height:42px;padding:10px 20px;background-color:#202125;border:0;color:#fff}
+.city-list{margin-top:10px}.city-list select{height:42px;padding:10px 20px;background-color:#202125;border:0;color:#fff}#animation_container{width:100%!important;height:100vh!important}#canvas{width:100%!important;height:100%!important;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}@media screen and (max-width:1000px){.front,html{overflow-x:hidden}#animation_container{height:45vh!important}}@media screen and (max-width:660px){#animation_container{height:41vh!important}}
 /*# sourceMappingURL=style.css.map */
