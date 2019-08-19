@@ -2420,44 +2420,43 @@ a.doc:focus
 		align-items: center
 		justify-content: center
 
-.partners__list 
-	.slick
-		&-dots 
-			margin-top: 25px
+.partners
+	&__list 
+		.slick
+			&-dots 
+				margin-top: 25px
 
-		&-list 
-			margin: 0 -17px
+			&-list 
+				margin: 0 -17px
 
-		&-track 
-			display: flex !important
+			&-track 
+				display: flex !important
 
-		&-slide
-			display: flex !important
-			margin: 0 17px
-			height: auto !important
-			background: #2c2e32
-			border-radius: 7px
+			&-slide
+				display: flex !important
+				margin: 0 17px
+				height: auto !important
+				background: #fff
+				border-radius: 7px
 
-			> 
-				div
-					display: flex
-					flex-direction: column
-					flex: 1 1 auto
-					justify-content: center
-					align-items: center
+				> 
+					div
+						display: flex
+						flex-direction: column
+						flex: 1 1 auto
+						justify-content: center
+						align-items: center
 
 
-
-.partners__item 
-	display: flex !important
-	justify-content: center
-	align-items: center
-	background: #2C2E32
-	border: 1px solid #2C2E32
-	opacity: .5
-	padding: 20px 45px
-	flex: 1 1 auto
-	height: auto !important
+	&__item 
+		display: flex !important
+		justify-content: center
+		align-items: center
+		background: #fff
+		padding: 20px 45px
+		flex: 1 1 auto
+		height: auto !important
+		border-radius: 5px
 
 
 @media screen and (max-width: 1440px) 
@@ -3407,6 +3406,9 @@ a.doc:focus
 
 		.text
 			padding: 20px 0 0 0
+
+	.partners__item
+		padding: 15px 20px
 	
 
 
