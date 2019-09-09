@@ -3535,22 +3535,20 @@ a.doc:focus
 		background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%)
 	
 
-	.product-slider-item .img 
-		width: 100%
-		padding-right: 0
-		-webkit-box-ordinal-group: 3
-		-ms-flex-order: 2
-		order: 2
+	.product-slider-item 
+		.img 
+			width: 100%
+			padding-right: 0
+			order: 2
+
+		.desc 
+			width: 100%
+			padding-left: 0
+			margin-bottom: 20px
 	
 
-	.product-slider-item .desc 
-		width: 100%
-		padding-left: 0
-		margin-bottom: 20px
-	
-
-	.product-slider-item .container 
-		max-width: 100%
+		.container 
+			max-width: 100%
 	
 
 	.product-slider .slider-wrap 
@@ -3673,12 +3671,14 @@ a.doc:focus
 		justify-content: space-around
 	
 
-	.production-tabs-content .img 
-		display: none
+	.production-tabs-content 
+		.img 
+			width: 100%
+			margin-top: 60px
 	
 
-	.production-tabs-content .desc 
-		width: 100%
+		.desc 
+			width: 100%
 	
 
 
