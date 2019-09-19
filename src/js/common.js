@@ -121,3 +121,20 @@ const setShadowOpacity = (element, scrollWidth, offsetWidth = 30) => {
   element.style.opacity = scrollWidth / offsetWidth <= 1 ? scrollWidth / offsetWidth : 1
 }
 
+
+
+$(window).on("load", e => {
+  var $video = $('video');
+
+  if(!$video.length){
+    return
+  }
+
+  var dataSrc = $video.attr('data-src');
+  $video.attr('src', dataSrc);
+  
+  $video[0].play();
+
+
+});
+

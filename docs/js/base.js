@@ -278,6 +278,18 @@ var setShadowOpacity = function setShadowOpacity(element, scrollWidth) {
   element.style.opacity = scrollWidth / offsetWidth <= 1 ? scrollWidth / offsetWidth : 1;
 };
 
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("load", function (e) {
+  var $video = jquery__WEBPACK_IMPORTED_MODULE_0___default()('video');
+
+  if (!$video.length) {
+    return;
+  }
+
+  var dataSrc = $video.attr('data-src');
+  $video.attr('src', dataSrc);
+  $video[0].play();
+});
+
 /***/ }),
 
 /***/ "./src/js/main.js":
