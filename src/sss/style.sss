@@ -1,3 +1,31 @@
+
+.instagram
+	display: none
+
+.page-contacts-
+	.instagram
+		display: block
+		position: absolute
+		right: 0
+		top: calc(50% - 10px)
+		font-size: rem(20)
+		letter-spacing: 0.02em
+		display: flex
+		align-items: center
+		color: #fff
+		text-decoration: none
+
+		&:before
+			content: ''
+			display: block
+			size: 17px
+			background-image: url('../img/ico-instagram.svg')
+			background-repeat: no-repeat
+			background-position: center
+			background-size: contain
+			margin-right: 20px
+
+
 .city-list
 	margin-top: 10px
 
@@ -83,3 +111,6 @@
 	
 	#animation_container
 		height: 41vh !important
+
+	.page-contacts- .instagram
+		position: static
