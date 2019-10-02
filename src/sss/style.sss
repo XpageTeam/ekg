@@ -18,7 +18,7 @@
 		&:before
 			content: ''
 			display: block
-			size: 17px
+			size: 40px
 			background-image: url('../img/ico-instagram.svg')
 			background-repeat: no-repeat
 			background-position: center
@@ -89,6 +89,8 @@
 			opacity: 1
 
 
+		&--mobile
+			display: none !important
 
 
 
@@ -107,10 +109,33 @@
 			height: 50vh
 
 
-@media screen and (max-width: 660px)
+@media screen and (max-width: 667px)
 	
 	#animation_container
 		height: 41vh !important
 
 	.page-contacts- .instagram
 		position: static
+
+	.main-banner__video
+		display: none !important
+		opacity: 0
+
+		&--mobile
+			position: relative
+			display: block !important
+			height: 400px
+
+			video
+				position: absolute
+				top: 0
+				left: 50%
+				transform: translate3d(-50%,0,0)
+				width: 150%
+				object-fit: cover
+				object-position: center
+
+	.front-top .container
+		bottom: 0
+		top: auto !important
+
