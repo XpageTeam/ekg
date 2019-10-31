@@ -9,6 +9,10 @@ body
 .title-search-result
 	display: none !important
 
+.inner
+	.top-search__cont
+		background-color: #000
+
 .top-search
 
 	&__cont
@@ -20,6 +24,12 @@ body
 		opacity: 0
 		pointer-events: none
 		transition: opacity .5s ease
+
+		.default-input__input
+			transition: background .3s ease
+
+			&:focus
+				background-color: #000
 
 		.title-search-result
 			display: block!important
@@ -70,9 +80,14 @@ body
 		width: 67px
 		cursor: pointer
 
+
+
+
 	&__inputs
 		position: relative
 		flex: 1 1 auto
+
+
 
 		&-submit
 			position: absolute 0 0 0 *
