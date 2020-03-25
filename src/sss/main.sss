@@ -41,6 +41,7 @@ body
 
 #parts-form
 	position: static !important
+
 .main 
 	flex: 1 1 auto
 
@@ -285,7 +286,7 @@ p:not(:last-child)
 	margin-bottom: 0
 
 
-.main 
+body.main 
 	min-height: calc(100vh - 483px)
 	padding-top: 30px
 	padding-bottom: 30px
@@ -1595,12 +1596,20 @@ svg.map-points
 	border: 1px solid #E9E9E9
 
 
+.catalog-items.row
+	margin: 0 0 -65px -65px
+
+	.col
+		width: calc((100% - 65px * 4) / 4)
+		margin: 0 0 65px 65px
+		padding: 0
+
 .product-card 
-	padding: 50px 40px
+	padding: 30px 25px 65px 20px
 
 
 .offers-card 
-	padding: 20px 40px 40px 40px
+	padding: 35px 25px 40px 20px
 
 	.col-left
 		display: flex
@@ -1610,22 +1619,43 @@ svg.map-points
 			margin-top: auto
 
 
-.product-card,
 .offers-card 
 	display: flex
 	flex-wrap: wrap
 
 
-.product-card .col-left,
-.product-card .col-right,
+
 .offers-card .col-left,
 .offers-card .col-right 
 	width: 50%
 
+.product-card
+	display: flex
+	flex-direction: column
 
-.product-card .col-right 
-	padding-left: 30px
-	padding-top: 20px
+	.col-right
+		display: flex
+		justify-content: space-between
+		margin-top: auto
+		align-items: center
+
+	.col-left
+		margin-bottom: 40px
+
+	.title, .more
+		margin: 0
+
+	.more
+		margin-left: 30px
+		flex: none
+
+
+
+
+
+// .product-card .col-right 
+// 	padding-left: 30px
+// 	padding-top: 20px
 
 
 .offers-card .col-right 
@@ -1645,13 +1675,44 @@ svg.map-points
 	align-items: flex-end
 
 
-.offers-card .col-right 
-	padding: 10px 0 20px 0
+.offers-card 
+	.col-right 
+		padding: 10px 0 20px 0
+		position: absolute
+		right: 25px
+		bottom: 45px
+		top: 20px
+		padding: 0
+		width: auto
+
+	.col-left
+		width: auto
+
+	.title
+		margin-top: auto
+		margin-bottom: 0
+		word-break: break-word
+		padding-right: 70px
+
+	// .more
+	// 	margin-right: 10px
+
+	.img
+		margin-bottom: 20px
 
 
 .offers-card .col-right .more 
-	margin-right: 20px
+	// margin-right: 20px
+	margin-top: auto
 
+
+// @supports (display: grid)
+	
+// 	.offers-card.card
+// 		position: relative
+// 		display: grid
+// 		grid-template-columns: 1fr 50px
+// 		grid-template-areas: "img img" "title btn"
 
 .catalog-items .card .title span 
 	display: block
@@ -1664,8 +1725,8 @@ svg.map-points
 
 
 .card .code 
-	font-size: 14px
-	color: #A9AAAC
+	font-size: 16px
+	color: #000
 
 
 .catalog-filters 
@@ -2561,6 +2622,13 @@ a.doc:focus
 @media screen and (max-width: 1366px) 
 	body 
 		font-size: 16px
+
+	.catalog-items.row
+		margin: 0 0 -40px -40px
+
+		.col
+			width: calc((100% - 40px * 4)/4)
+			margin: 0 0 40px 40px
 	
 
 	.page-section:not(.front-top):not(.top-block):not(.submenu-wrap):not(.footer) 
@@ -2744,6 +2812,14 @@ a.doc:focus
 
 
 @media screen and (max-width: 1280px) 
+
+	.offers-card .col-right
+		bottom: 30px
+
+	.offers-card
+		padding-bottom: 30px
+
+
 	ul.nav li, .footer, .production-menu li 
 		font-size: 14px
 	
@@ -2755,14 +2831,12 @@ a.doc:focus
 	header, .footer .copyright, .footer .iso, .btn, .form-control, .parts-table 
 		font-size: 16px
 	
-
-	.product-card 
-		padding: 30px 20px
 	
 
-	.offers-card 
-		padding: 20px 30px 30px 30px
 	
+	.product-card
+		padding: 20px
+
 
 	.card .price 
 		font-size: 20px
@@ -2959,10 +3033,7 @@ a.doc:focus
 
 	.catalog-text 
 		margin-top: 20px
-	
 
-	.product-card .col-right 
-		padding-left: 20px
 	
 
 	.btn, .breadcrumb, .parts-table 
@@ -3057,6 +3128,12 @@ a.doc:focus
 	.production-menu
 		margin-left: 0
 		margin-right: 0
+
+	.catalog-items.row .col
+		width: calc((100% - 80px)/2)
+
+	.offers-card .col-right
+		bottom: 10px
 
 @media screen and (max-width: 960px)
 	
@@ -3460,6 +3537,9 @@ a.doc:focus
 
 
 @media screen and (max-width: 660px)
+
+	.catalog-items.row .col
+		width: 100%
 
 	.production-menu
 		margin: 0
