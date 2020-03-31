@@ -12,6 +12,19 @@ require("./slinky.min.js");
 require("./jquery.fancybox.js");
 require("../css/jquery.fancybox.css");
 
+// document.addEventListener("DOMContentLoaded", function(){
+
+// 	$(".fancybox").fancybox({
+// 		trapFocus: false,
+// 		touch: false,
+// 		buttons: ["fullscreen", "close", "thumbs"],
+// 		image: {
+// 			preload: true,
+// 		},
+// 		transitionEffect: "slide",
+// 	});
+// })
+
 
 ;(function() {
 

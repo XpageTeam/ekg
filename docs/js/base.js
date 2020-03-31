@@ -182,7 +182,18 @@ __webpack_require__(/*! ./slinky.min.js */ "./src/js/slinky.min.js");
 
 __webpack_require__(/*! ./jquery.fancybox.js */ "./src/js/jquery.fancybox.js");
 
-__webpack_require__(/*! ../css/jquery.fancybox.css */ "./src/css/jquery.fancybox.css");
+__webpack_require__(/*! ../css/jquery.fancybox.css */ "./src/css/jquery.fancybox.css"); // document.addEventListener("DOMContentLoaded", function(){
+// 	$(".fancybox").fancybox({
+// 		trapFocus: false,
+// 		touch: false,
+// 		buttons: ["fullscreen", "close", "thumbs"],
+// 		image: {
+// 			preload: true,
+// 		},
+// 		transitionEffect: "slide",
+// 	});
+// })
+
 
 ;
 
