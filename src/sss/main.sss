@@ -1353,7 +1353,9 @@ a.phone::before
 	display: flex
 	justify-content: center
 	align-items: center
-
+	min-height: 515px
+	@media screen and (max-width: 512px)
+		min-height: 340px
 
 .production-tabs-content .img::before 
 	content: ''
